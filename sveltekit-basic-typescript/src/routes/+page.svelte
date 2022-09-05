@@ -1,5 +1,8 @@
 <script lang="ts">
 	import Counter from '$lib/Counter.svelte';
+	import MasonryGallery from '$lib/masonry-gallery.svelte';
+	import InlineGallery from '$lib/inline-gallery.svelte';
+	import { items } from './+page';
 </script>
 
 <svelte:head>
@@ -25,6 +28,12 @@
 
 	<Counter />
 </section>
+
+<!-- masonry gallery section -->
+<MasonryGallery {items} />
+
+<!-- inline gallery -->
+<InlineGallery {items} />
 
 <style>
 	section {
