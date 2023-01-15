@@ -2,6 +2,12 @@
 	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
+
+	import MasonryGallery from '$lib/masonry-gallery.svelte';
+	import InlineGallery from '$lib/inline-gallery.svelte';
+
+	export let data;
+	const { items } = data;
 </script>
 
 <svelte:head>
@@ -27,6 +33,12 @@
 
 	<Counter />
 </section>
+
+<!-- masonry gallery section -->
+<MasonryGallery {items} />
+
+<!-- inline gallery -->
+<InlineGallery {items} />
 
 <style>
 	section {
