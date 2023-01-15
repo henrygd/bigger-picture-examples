@@ -15,9 +15,10 @@
 	/** click handler */
 	function openBiggerPicture(e: Event) {
 		e.preventDefault();
+		const target = e.currentTarget as HTMLAnchorElement;
 		bp.open({
-			items: (<HTMLElement>e.currentTarget).parentElement!.children,
-			el: <HTMLElement>e.currentTarget,
+			items: target.parentElement!.children,
+			el: target,
 		});
 	}
 
